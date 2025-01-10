@@ -9,7 +9,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -34,19 +33,22 @@ public class RegisterController {
     // Will let the user register or display error information
     @FXML
     protected void onRegisterButtonClick(ActionEvent event) throws IOException {
+        // Get the user input from the text fields
         String username = usernameField.getText();
         String password = passwordField.getText();
 
+        // Make the user provide some input
         if (username.isEmpty()) {
             errorLabel.setText("Username cannot be empty.");
         } else if (password.isEmpty()) {
             errorLabel.setText("Password cannot be empty.");
         } else if (validUsername(username) && validPassword(password)) {
+
             // Add the user credentials to the array list of users
             ArrayList<String[]> users = UserCredentials.getUsers();
             users.add(new String[]{username, password});
 
-            // Take the user to the login success scene
+            // Take the user to the register success scene
             FXMLLoader fxmlLoader = new FXMLLoader(AppController.class.getResource("register-success-view.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 500, 400);
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow(); // gets the current stage
@@ -67,9 +69,9 @@ public class RegisterController {
     private boolean validUsername(String username) {
         // Get the user credentials from the array list
         ArrayList<String[]> users = UserCredentials.getUsers();
-        boolean valid = false;
 
         // check if the username already exists in the array list
+        boolean valid = false;
         for (String[] user : users) {
             if (!(user[0].equalsIgnoreCase(username))) {
                 valid = true;
@@ -78,6 +80,7 @@ public class RegisterController {
                 break;
             }
         }
+
         return valid;
     }
 

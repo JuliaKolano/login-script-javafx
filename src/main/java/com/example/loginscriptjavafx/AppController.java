@@ -6,11 +6,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 
 public class AppController {
-    // Take the user to the register screen
+    // Take the user to the register scene
     @FXML
     protected void onRegisterButtonClick(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(AppController.class.getResource("register-view.fxml"));

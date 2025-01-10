@@ -9,10 +9,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 import java.util.ArrayList;
-
 
 public class LoginController {
     @FXML
@@ -35,9 +33,11 @@ public class LoginController {
     // Will let the user log in or display error information
     @FXML
     protected void onLoginButtonClick(ActionEvent event) throws IOException {
+        // Get user inputs from the text fields
         String username = usernameField.getText();
         String password = passwordField.getText();
 
+        // Make the user provide some input
         if (username.isEmpty()) {
             errorLabel.setText("Username cannot be empty.");
         } else if (password.isEmpty()) {

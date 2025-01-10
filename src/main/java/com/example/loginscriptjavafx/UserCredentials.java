@@ -7,7 +7,7 @@ public class UserCredentials {
     // Stored as an array list for simplicity of this project
     private static ArrayList<String[]> users = new ArrayList<>();
 
-    // Populate the array list with user credentials
+    // Populate the array list with user credentials upon class instance creation
     public UserCredentials() {
         users.add(new String[]{"Plutonic", "yKDBBZ4ap"});
         users.add(new String[]{"Misdrawn", "HJfJTjdl"});

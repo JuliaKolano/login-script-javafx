@@ -1,17 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.Font?>
-<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.*?>
 
 <VBox alignment="CENTER" prefHeight="356.0" prefWidth="512.0" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.loginscriptjavafx.RegisterController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
-    <Label text="The Register Screen!">
+    <Label text="Register">
         <font>
             <Font size="18.0" />
         </font>
     </Label>
+    <Separator maxWidth="200" prefHeight="1.0" prefWidth="200" />
+    <TextField fx:id="usernameField" maxWidth="200" prefWidth="200" promptText="username">
+        <font>
+            <Font size="14.0" />
+        </font></TextField>
+    <PasswordField fx:id="passwordField" maxWidth="200" prefHeight="25.0" prefWidth="200" promptText="password">
+        <font>
+            <Font size="14.0" />
+        </font></PasswordField>
+    <HBox maxWidth="200.0" prefHeight="33.0" prefWidth="200.0">
+        <Pane prefWidth="135.0">
+            <Button alignment="CENTER" cancelButton="true" mnemonicParsing="false" onAction="#onCancelButtonClick" text="Cancel" textAlignment="CENTER">
+                <font>
+                    <Font size="14.0" />
+                </font></Button>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </Pane>
+        <Pane>
+            <Button alignment="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#onRegisterButtonClick" text="Register" textAlignment="CENTER">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Button>
+        </Pane>
+    </HBox>
+    <Label fx:id="errorLabel" textAlignment="CENTER" textFill="#a40000" wrapText="true" />
 </VBox>

@@ -58,12 +58,10 @@ public class LoginController {
 
     // Check if the user credentials match with the stored users
     private boolean checkCredentials(String username, String password) {
-        // Populate user credentials array
-        new UserCredentials();
         // Get the user credentials from the array list
         ArrayList<String[]> users = UserCredentials.getUsers();
 
-        // check is any usernames and passwords match
+        // check if any usernames and passwords match
         for (String[] user : users) {
             if (user[0].equalsIgnoreCase(username) && user[1].equals(password)) {
                 return true;

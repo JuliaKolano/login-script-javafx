@@ -15,11 +15,11 @@
         </font>
     </Label>
    <Separator maxWidth="200" prefHeight="1.0" prefWidth="200" />
-   <TextField fx:id="usernameField" maxWidth="200" prefWidth="200">
+   <TextField promptText="username" fx:id="usernameField" maxWidth="200" prefWidth="200">
       <font>
          <Font size="14.0" />
       </font></TextField>
-   <PasswordField fx:id="passwordField" maxWidth="200" prefHeight="25.0" prefWidth="200">
+   <PasswordField promptText="password" fx:id="passwordField" maxWidth="200" prefHeight="25.0" prefWidth="200">
       <font>
          <Font size="14.0" />
       </font></PasswordField>

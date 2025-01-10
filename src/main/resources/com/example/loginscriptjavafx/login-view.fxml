@@ -1,17 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.Font?>
-<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.*?>
 
 <VBox alignment="CENTER" prefHeight="356.0" prefWidth="512.0" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.loginscriptjavafx.LoginController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
-    <Label text="The Login Screen!">
+    <Label text="Login">
         <font>
             <Font size="18.0" />
         </font>
     </Label>
+   <Separator maxWidth="200" prefHeight="1.0" prefWidth="200" />
+   <TextField maxWidth="200" prefWidth="200">
+      <font>
+         <Font size="14.0" />
+      </font></TextField>
+   <PasswordField maxWidth="200" prefHeight="25.0" prefWidth="200">
+      <font>
+         <Font size="14.0" />
+      </font></PasswordField>
+   <HBox maxWidth="200.0" prefHeight="33.0" prefWidth="200.0">
+       <Pane prefWidth="155.0">
+           <Button alignment="CENTER" cancelButton="true" mnemonicParsing="false" text="Cancel" textAlignment="CENTER">
+            <font>
+               <Font size="14.0" />
+            </font></Button>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+       </Pane>
+       <Pane>
+         <children>
+              <Button alignment="CENTER" defaultButton="true" mnemonicParsing="false" text="Login" textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+         </children>
+       </Pane>
+     </HBox>
+   <Label textFill="#a40000" />
 </VBox>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="356.0" prefWidth="512.0" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.loginscriptjavafx.AppController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <Label text="Welcome!">
+      <font>
+         <Font size="18.0" />
+      </font>
+   </Label>
+    <Button id="registerButton" focusTraversable="false" mnemonicParsing="false" onAction="#onRegisterButtonClick" prefHeight="30.0" prefWidth="175.0" text="Register" textAlignment="CENTER">
+      <font>
+         <Font size="14.0" />
+      </font></Button>
+   <Button id="loginButton" focusTraversable="false" onAction="#onLoginButtonClick" prefHeight="30.0" prefWidth="175.0" text="Login" textAlignment="CENTER">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Button>
+</VBox>

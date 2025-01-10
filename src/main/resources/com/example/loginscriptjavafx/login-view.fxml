@@ -15,17 +15,17 @@
         </font>
     </Label>
    <Separator maxWidth="200" prefHeight="1.0" prefWidth="200" />
-   <TextField maxWidth="200" prefWidth="200">
+   <TextField fx:id="usernameField" maxWidth="200" prefWidth="200">
       <font>
          <Font size="14.0" />
       </font></TextField>
-   <PasswordField maxWidth="200" prefHeight="25.0" prefWidth="200">
+   <PasswordField fx:id="passwordField" maxWidth="200" prefHeight="25.0" prefWidth="200">
       <font>
          <Font size="14.0" />
       </font></PasswordField>
    <HBox maxWidth="200.0" prefHeight="33.0" prefWidth="200.0">
        <Pane prefWidth="155.0">
-           <Button alignment="CENTER" cancelButton="true" mnemonicParsing="false" text="Cancel" textAlignment="CENTER">
+           <Button onAction="#onCancelButtonClick" alignment="CENTER" cancelButton="true" mnemonicParsing="false" text="Cancel" textAlignment="CENTER">
             <font>
                <Font size="14.0" />
             </font></Button>
@@ -34,13 +34,12 @@
          </opaqueInsets>
        </Pane>
        <Pane>
-         <children>
-              <Button alignment="CENTER" defaultButton="true" mnemonicParsing="false" text="Login" textAlignment="CENTER">
-               <font>
-                  <Font size="14.0" />
-               </font></Button>
-         </children>
+           <Button onAction="#onLoginButtonClick" alignment="CENTER" defaultButton="true" mnemonicParsing="false" text="Login" textAlignment="CENTER">
+            <font>
+                <Font size="14.0"/>
+            </font>
+           </Button>
        </Pane>
      </HBox>
-   <Label textFill="#a40000" />
+   <Label fx:id="errorLabel" textFill="#a40000" />
 </VBox>
